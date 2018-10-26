@@ -1,15 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This is a template of what a python program should look like, in general.
+String 1 questions for backend string assessment.
 
-There should be a blank line in between succinct description above, and this
-more detailed description.  In this section you should put any caveats, 
-environment variable expectations, gotchas, and other notes about running
-the program.
+This is the first set of questions dealing with string manipulation.
+This assessment is for us to practice on our ability
+to work with strings.
 
 author: tjhindman
 """
+
+
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
@@ -71,7 +72,7 @@ def fix_start(s):
 
     s_list = list(s)
 
-    for i,c in enumerate(s_list):
+    for i, c in enumerate(s_list):
         if i > 0:
             if c == s_list[0]:
                 s_list[i] = '*'

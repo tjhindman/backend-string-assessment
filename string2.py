@@ -1,4 +1,16 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+String 2 questions for backend string assessment.
+
+This is the second set of questions dealing with string manipulation.
+This assessment is for us to practice on our ability
+to work with strings.
+
+author: tjhindman
+"""
+
+
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
@@ -19,8 +31,14 @@
 
 def verbing(s):
     """Your code goes here.  Edit this docstring."""
-    return
 
+    if len(s) >= 3:
+        if s[-3:] != "ing":
+            return s + "ing"
+        else:
+            return s + "ly"
+    else:
+        return s
 
 # E. not_bad
 # Given a string, find the first appearance of the
@@ -32,7 +50,17 @@ def verbing(s):
 # This dinner is good!
 def not_bad(s):
     """Your code goes here.  Edit this docstring."""
-    return
+
+    # s_list = s.split(" ")
+    # s_check = ""
+
+    # for i, c in enumerate(s_list):
+    #     if c == "not":
+    #         for c in s_list[i:]:
+    #             if "bad" in c:
+    #                 s_list[i:] == "good"
+
+    # return s_list
 
 
 # F. front_back
@@ -44,7 +72,10 @@ def not_bad(s):
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
     """Your code goes here.  Edit this docstring."""
-    return
+
+    # if len(a) % 2 == 0:
+
+    # return
 
 
 # Provided simple test() function used in main() to print
