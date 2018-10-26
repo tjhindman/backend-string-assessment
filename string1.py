@@ -1,4 +1,15 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+This is a template of what a python program should look like, in general.
+
+There should be a blank line in between succinct description above, and this
+more detailed description.  In this section you should put any caveats, 
+environment variable expectations, gotchas, and other notes about running
+the program.
+
+author: tjhindman
+"""
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
@@ -25,7 +36,11 @@
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
     """Your code goes here.  Edit this docstring."""
-    return
+
+    if count < 10:
+        return 'Number of donuts: {count}'.format(count=count)
+    else:
+        return 'Number of donuts: many'
 
 
 # B. both_ends
@@ -35,7 +50,11 @@ def donuts(count):
 # is less than 2, return instead the empty string.
 def both_ends(s):
     """Your code goes here.  Edit this docstring."""
-    return
+
+    if len(s) > 2:
+        return s[:2] + s[-2:]
+    else:
+        return ''
 
 
 # C. fix_start
@@ -49,19 +68,34 @@ def both_ends(s):
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
     """Your code goes here.  Edit this docstring."""
-    return
+
+    s_list = list(s)
+
+    for i,c in enumerate(s_list):
+        if i > 0:
+            if c == s_list[0]:
+                s_list[i] = '*'
+
+    return ''.join(s_list)
 
 
 # D. MixUp
 # Given strings a and b, return a single string with a and b separated
 # by a space '<a> <b>', except swap the first 2 chars of each string.
 # e.g.
-#   'mix', pod' -> 'pox mid'
+#   'mix', 'pod' -> 'pox mid'
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
     """Your code goes here.  Edit this docstring."""
-    return
+
+    a_list = list(a)
+    b_list = list(b)
+
+    a_list[:2] = b[:2]
+    b_list[:2] = a[:2]
+
+    return ''.join(a_list) + ' ' + ''.join(b_list)
 
 
 # Provided simple test() function used in main() to print
