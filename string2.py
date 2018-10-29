@@ -51,16 +51,12 @@ def verbing(s):
 def not_bad(s):
     """Your code goes here.  Edit this docstring."""
 
-    # s_list = s.split(" ")
-    # s_check = ""
+    n_index = s.find("not")
+    b_index = s.find("bad")
 
-    # for i, c in enumerate(s_list):
-    #     if c == "not":
-    #         for c in s_list[i:]:
-    #             if "bad" in c:
-    #                 s_list[i:] == "good"
-
-    # return s_list
+    if n_index != -1 and b_index != -1 and n_index < b_index:
+        s = s[:n_index] + "good" + s[b_index + 3:]
+    return s
 
 
 # F. front_back
@@ -73,9 +69,15 @@ def not_bad(s):
 def front_back(a, b):
     """Your code goes here.  Edit this docstring."""
 
-    # if len(a) % 2 == 0:
+    a_mid = len(a) / 2
+    b_mid = len(b) / 2
 
-    # return
+    if len(a) % 2:
+        a_mid += 1
+    if len(b) % 2:
+        b_mid += 1 
+
+    return a[:a_mid] + b[:b_mid] + a[a_mid:] + b[b_mid:]
 
 
 # Provided simple test() function used in main() to print
